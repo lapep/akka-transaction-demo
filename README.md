@@ -10,7 +10,6 @@ Expected input: POST request of type 'application/json' with a request body:
 Expected output: 200 Accepted with the json body of:
 `{"sender":1,"receiver":2,"amount":10.0,"message":"Completed","info":"Success"}`
 
-To run the application: import as SBT project and run `sbt run` or package the app with all the dependecies
-by running `sbt assembly` command and execute as a JAR.
+To run the application: import as SBT project and run `sbt run` or package the app with all the dependecies by running `sbt assembly` command and execute as a JAR.
 In it's in-memory "database" it has two users 1 with a balance of 100, and 2 with a balance of 100 as well.
 It can be changed by modifying underlying HashMap in the Main object.
