@@ -92,7 +92,7 @@ class TransactionRoutesTest extends WordSpec with MockitoSugar with Matchers wit
         status.isSuccess() shouldEqual true
         response.status shouldBe StatusCodes.OK
         val body = Await.result(response.entity.toStrict(2.seconds), 2.seconds)
-        body.data.utf8String shouldBe """{"sender":1,"receiver":2,"amount":20.0,"message":"Failed","reason":"Error"}"""
+        body.data.utf8String shouldBe """{"sender":1,"receiver":2,"amount":20.0,"message":"Failed","info":"Error"}"""
       }
     }
   }

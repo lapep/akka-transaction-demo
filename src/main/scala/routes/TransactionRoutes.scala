@@ -23,7 +23,7 @@ class TransactionRoutes(transferCoordinator: ActorRef)(implicit actorSystem: Act
               onComplete(transferCoordinator ? Transaction(rq.sender, rq.receiver, rq.amount)) {
                 case Success(res) => res match {
                   case Done =>
-                    complete(StatusCodes.OK, TransactionResponse(rq.sender, rq.receiver, rq.amount, "Complete"))
+                    complete(StatusCodes.OK, TransactionResponse(rq.sender, rq.receiver, rq.amount, "Completed"))
                   case Failed(reason, account, amount) =>
                     complete(StatusCodes.OK, TransactionResponse(rq.sender, rq.receiver, rq.amount, "Failed", reason))
                 }

@@ -5,5 +5,5 @@ package object api {
   case class apiError(reason: String)
 
   case class TransactionRequest(sender: Long, receiver: Long, amount: Double)
-  case class TransactionResponse(sender: Long, receiver: Long, amount: Double, message: String, reason: String = "Success")
+  case class TransactionResponse(sender: Long, receiver: Long, amount: Double, message: String, info: String = "Success")
 }
