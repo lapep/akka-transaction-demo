@@ -52,8 +52,6 @@ object TransferCoordinator {
 
   case class Transaction(sender: Long, receiver: Long, amount: BigDecimal)
 
-  case class TransactionRollback(sender: Long, amount: BigDecimal)
-
   case object Done
 
   case class Failed(reason: String, account: Long, amount: BigDecimal)
